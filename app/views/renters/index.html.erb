@@ -42,9 +42,9 @@
         <td><%= renter.facebook_url %></td>
         <td><%= renter.linkedin_url %></td>
         <td><%= renter.misc %></td>
-        <td><%= link_to 'Show', renter %></td>
-        <td><%= link_to 'Edit', edit_renter_path(renter) %></td>
-        <td><%= link_to 'Destroy', renter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', renter, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_renter_path(renter), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', renter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -52,4 +52,4 @@
 
 <br>
 
-<%= link_to 'New Renter', new_renter_path %>
+<%= link_to 'New Renter', new_renter_path, class: "btn btn-link" %>
