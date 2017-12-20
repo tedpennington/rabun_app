@@ -13,6 +13,9 @@
   <body>
     <%= render 'layouts/navbar' %>
     <div class="container-fluid">
+      <%#Required for Devise Gem to send notifications to users%>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
       <%= render 'layouts/footer' %>
     </div>
