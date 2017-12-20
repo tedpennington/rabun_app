@@ -37,10 +37,10 @@
         <td><%= renter.zip %></td>
         <td><%= renter.phone_number %></td>
         <td><%= renter.mobile_phone %></td>
-        <td><%= renter.vrbo_url %></td>
-        <td><%= renter.airbnb_url %></td>
-        <td><%= renter.facebook_url %></td>
-        <td><%= renter.linkedin_url %></td>
+        <td><%= link_to renter.vrbo_url, renter.vrbo_url %></td>
+        <td><%= link_to renter.airbnb_url, renter.airbnb_url %></td>
+        <td><%= link_to renter.facebook_url, renter.facebook_url %></td>
+        <td><%= link_to renter.linkedin_url, renter.linkedin_url %></td>
         <td><%= renter.misc %></td>
         <td><%= link_to 'Show', renter, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_renter_path(renter), class: "btn btn-link" %></td>
