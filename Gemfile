@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Carrierwave for images per tut -tp
+gem 'carrierwave'
+
 # Devise for users
 gem 'devise'
 

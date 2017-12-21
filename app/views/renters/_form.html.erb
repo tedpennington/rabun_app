@@ -1,4 +1,4 @@
-<%= form_with(model: renter, local: true) do |form| %>
+<%= form_with(model: renter, :html => { multipart: true }, local: true) do |form| %>
   <% if renter.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(renter.errors.count, "error") %> prohibited this renter from being saved:</h2>
@@ -85,6 +85,11 @@
     <%= form.label :misc %>
     <%= form.text_field :misc, id: :renter_misc, class: "form-control" %>
   </div>
+
+  <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image, id: :renter_image, class: "form-control" %>
+    </div>
 
   <div class="actions">
     <%= form.submit class: "btn btn-primary" %>
