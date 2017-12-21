@@ -75,5 +75,6 @@
   <%= @renter.misc %>
 </p>
 
+<%= link_to  "Write a Review", new_renter_review_path(@renter), class: "btn btn-primary"%>
 <%= link_to 'Edit', edit_renter_path(@renter), class: "btn btn-link" %> |
 <%= link_to 'Back', renters_path, class: "btn btn-link" %>
