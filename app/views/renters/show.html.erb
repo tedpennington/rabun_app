@@ -1,80 +1,99 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @renter.first_name %>
-</p>
+<div class="row">
+  <div class="col-md-3">
+      <p>
+          <strong>First name:</strong>
+          <%= @renter.first_name %>
+        </p>
+        
+        <p>
+          <strong>Last name:</strong>
+          <%= @renter.last_name %>
+        </p>
+        
+        <p>
+          <strong>Aka:</strong>
+          <%= @renter.aka %>
+        </p>
+        
+        <p>
+          <strong>Email:</strong>
+          <%= @renter.email %>
+        </p>
+        
+        <p>
+          <strong>Street address:</strong>
+          <%= @renter.street_address %>
+        </p>
+        
+        <p>
+          <strong>City:</strong>
+          <%= @renter.city %>
+        </p>
+        
+        <p>
+          <strong>State:</strong>
+          <%= @renter.state %>
+        </p>
+        
+        <p>
+          <strong>Zip:</strong>
+          <%= @renter.zip %>
+        </p>
+        
+        <p>
+          <strong>Phone number:</strong>
+          <%= @renter.phone_number %>
+        </p>
+        
+        <p>
+          <strong>Mobile phone:</strong>
+          <%= @renter.mobile_phone %>
+        </p>
+        
+        <p>
+          <strong>Vrbo url:</strong>
+          <%= @renter.vrbo_url %>
+        </p>
+        
+        <p>
+          <strong>Airbnb url:</strong>
+          <%= @renter.airbnb_url %>
+        </p>
+        
+        <p>
+          <strong>Facebook url:</strong>
+          <%= @renter.facebook_url %>
+        </p>
+        
+        <p>
+          <strong>Linkedin url:</strong>
+          <%= @renter.linkedin_url %>
+        </p>
+        
+        <p>
+          <strong>Misc:</strong>
+          <%= @renter.misc %>
+        </p>
+        
+        <%= link_to  "Write a Review", new_renter_review_path(@renter), class: "btn btn-primary"%>
+  </div>
+  <div class="col-md-9">
+      <% if @reviews.blank? %>
+        <h3>No reviews yet.</h3>
+      <% else %>
+        <% @reviews.each do |review| %>
+          <p><%= review.rating_overall %></p>
+          <p><%= review.comment %></p>
+        <% end %>
+      <% end %>
+  </div>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @renter.last_name %>
-</p>
 
-<p>
-  <strong>Aka:</strong>
-  <%= @renter.aka %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @renter.email %>
-</p>
 
-<p>
-  <strong>Street address:</strong>
-  <%= @renter.street_address %>
-</p>
 
-<p>
-  <strong>City:</strong>
-  <%= @renter.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @renter.state %>
-</p>
-
-<p>
-  <strong>Zip:</strong>
-  <%= @renter.zip %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @renter.phone_number %>
-</p>
-
-<p>
-  <strong>Mobile phone:</strong>
-  <%= @renter.mobile_phone %>
-</p>
-
-<p>
-  <strong>Vrbo url:</strong>
-  <%= @renter.vrbo_url %>
-</p>
-
-<p>
-  <strong>Airbnb url:</strong>
-  <%= @renter.airbnb_url %>
-</p>
-
-<p>
-  <strong>Facebook url:</strong>
-  <%= @renter.facebook_url %>
-</p>
-
-<p>
-  <strong>Linkedin url:</strong>
-  <%= @renter.linkedin_url %>
-</p>
-
-<p>
-  <strong>Misc:</strong>
-  <%= @renter.misc %>
-</p>
-
-<%= link_to  "Write a Review", new_renter_review_path(@renter), class: "btn btn-primary"%>
 <%= link_to 'Edit', edit_renter_path(@renter), class: "btn btn-link" %> |
 <%= link_to 'Back', renters_path, class: "btn btn-link" %>
