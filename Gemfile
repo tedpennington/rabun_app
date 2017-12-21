@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # Carrierwave for images per tut -tp
 gem 'carrierwave'
 
+# Fog gem for Carrierwave to integrate with AWS hosting per tut -tp
+gem "fog-aws"
+
 # Devise for users
 gem 'devise'
 
