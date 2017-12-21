@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rating overall</th>
+      <th>Rating damage</th>
+      <th>Rating payment</th>
+      <th>Rating communication</th>
+      <th>Rating checkinout</th>
+      <th>People number</th>
+      <th>Comment</th>
+      <th>Property name</th>
+      <th>Property address</th>
+      <th>Property unit</th>
+      <th>Property city</th>
+      <th>Property state</th>
+      <th>Property zip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= review.rating_overall %></td>
+        <td><%= review.rating_damage %></td>
+        <td><%= review.rating_payment %></td>
+        <td><%= review.rating_communication %></td>
+        <td><%= review.rating_checkinout %></td>
+        <td><%= review.people_number %></td>
+        <td><%= review.comment %></td>
+        <td><%= review.property_name %></td>
+        <td><%= review.property_address %></td>
+        <td><%= review.property_unit %></td>
+        <td><%= review.property_city %></td>
+        <td><%= review.property_state %></td>
+        <td><%= review.property_zip %></td>
+        <td><%= link_to 'Show', review %></td>
+        <td><%= link_to 'Edit', edit_review_path(review) %></td>
+        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review', new_review_path %>

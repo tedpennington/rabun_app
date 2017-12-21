@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rating overall:</strong>
+  <%= @review.rating_overall %>
+</p>
+
+<p>
+  <strong>Rating damage:</strong>
+  <%= @review.rating_damage %>
+</p>
+
+<p>
+  <strong>Rating payment:</strong>
+  <%= @review.rating_payment %>
+</p>
+
+<p>
+  <strong>Rating communication:</strong>
+  <%= @review.rating_communication %>
+</p>
+
+<p>
+  <strong>Rating checkinout:</strong>
+  <%= @review.rating_checkinout %>
+</p>
+
+<p>
+  <strong>People number:</strong>
+  <%= @review.people_number %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @review.comment %>
+</p>
+
+<p>
+  <strong>Property name:</strong>
+  <%= @review.property_name %>
+</p>
+
+<p>
+  <strong>Property address:</strong>
+  <%= @review.property_address %>
+</p>
+
+<p>
+  <strong>Property unit:</strong>
+  <%= @review.property_unit %>
+</p>
+
+<p>
+  <strong>Property city:</strong>
+  <%= @review.property_city %>
+</p>
+
+<p>
+  <strong>Property state:</strong>
+  <%= @review.property_state %>
+</p>
+
+<p>
+  <strong>Property zip:</strong>
+  <%= @review.property_zip %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>

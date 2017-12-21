@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171220205838) do
+ActiveRecord::Schema.define(version: 20171221013801) do
 
   create_table "renters", force: :cascade do |t|
     t.string "first_name"
@@ -28,6 +28,24 @@ ActiveRecord::Schema.define(version: 20171220205838) do
     t.string "facebook_url"
     t.string "linkedin_url"
     t.string "misc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating_overall"
+    t.integer "rating_damage"
+    t.integer "rating_payment"
+    t.integer "rating_communication"
+    t.integer "rating_checkinout"
+    t.integer "people_number"
+    t.text "comment"
+    t.string "property_name"
+    t.string "property_address"
+    t.string "property_unit"
+    t.string "property_city"
+    t.string "property_state"
+    t.integer "property_zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

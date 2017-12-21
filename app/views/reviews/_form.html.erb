@@ -1,0 +1,82 @@
+<%= form_with(model: review, local: true) do |form| %>
+  <% if review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rating_overall %>
+    <%= form.number_field :rating_overall, id: :review_rating_overall %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating_damage %>
+    <%= form.number_field :rating_damage, id: :review_rating_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating_payment %>
+    <%= form.number_field :rating_payment, id: :review_rating_payment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating_communication %>
+    <%= form.number_field :rating_communication, id: :review_rating_communication %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating_checkinout %>
+    <%= form.number_field :rating_checkinout, id: :review_rating_checkinout %>
+  </div>
+
+  <div class="field">
+    <%= form.label :people_number %>
+    <%= form.number_field :people_number, id: :review_people_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment, id: :review_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_name %>
+    <%= form.text_field :property_name, id: :review_property_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_address %>
+    <%= form.text_field :property_address, id: :review_property_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_unit %>
+    <%= form.text_field :property_unit, id: :review_property_unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_city %>
+    <%= form.text_field :property_city, id: :review_property_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_state %>
+    <%= form.text_field :property_state, id: :review_property_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_zip %>
+    <%= form.number_field :property_zip, id: :review_property_zip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
