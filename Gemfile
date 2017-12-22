@@ -36,7 +36,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave'
 
 # Fog gem for Carrierwave to integrate with AWS hosting per tut -tp
-gem "fog-aws"
+gem 'fog-aws'
+
+# Figaro for creds on Heroku -tp
+gem 'figaro', '~> 1.0.0'
 
 # Devise for users
 gem 'devise'
