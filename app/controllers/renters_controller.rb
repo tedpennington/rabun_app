@@ -13,7 +13,9 @@ class RentersController < ApplicationController
   # GET /renters/1
   # GET /renters/1.json
   def show
+    @renter = Renter.find(params[:id])
     @reviews = Review.where(renter_id: @renter.id)
+    
   end
 
   # GET /renters/new
