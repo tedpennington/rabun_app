@@ -39,13 +39,16 @@ gem 'carrierwave'
 gem 'fog-aws'
 
 # Figaro for creds on Heroku -tp
-gem 'figaro', '~> 1.0.0'
+# gem 'figaro', '~> 1.0.0'
 
 # Devise for users
 gem 'devise'
 
 # Jquery
 gem 'jquery-rails', '~> 4.0', '>= 4.0.5'
+
+# Font Awesome for icons
+gem 'font-awesome-rails'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record Only in Dev and Test -tp

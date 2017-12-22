@@ -40,14 +40,15 @@
       <%#END SEARCH FORM%>
       <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-          <li class="nav-item">
-              <%= link_to  "Edit Profile", edit_user_registration_path, class: "nav-link" %>
-              <%#= link_to edit_user_registration_path, class: "" do %>
-                <!-- <i class="glyphicon glyphicon-user"></i> -->
-               <%# end %>
-          </li> 
-          <li class="nav-item">
-              <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <li class="nav-item hover-not">
+              <%# Replaced with font-awesome icon %>
+              <%#= link_to  "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+              <%= link_to fa_icon("user", class: "fa fa-user"), edit_user_registration_path %>
+            </li> 
+            <li class="nav-item">
+              <%# Replaced with font-awesome icon %>
+              <%#= link_to  "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              <%= link_to fa_icon("sign-out", class: "fa fa-sign-out"), destroy_user_session_path, method: :delete %>
           </li>
           <% else %>
 

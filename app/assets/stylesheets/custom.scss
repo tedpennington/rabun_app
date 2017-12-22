@@ -1,4 +1,16 @@
-.glyphicon.glyphicon-user {
+@import "font-awesome";
+
+.hover-not a:hover {
+  background-color: none !important;
+}
+.fa.fa-user, .fa.fa-sign-out {
   color: white;
-  font-size: 2em;
+  font-size: 2.25em;
+  padding: 7px;
+  padding-left: 15px;
+    a{
+      &:hover{
+        background-color: red !important;
+      }
+    }
 }
