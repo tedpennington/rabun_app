@@ -85,8 +85,12 @@
         <h3>No reviews yet.</h3>
       <% else %>
         <% @reviews.each do |review| %>
-          <p><%= review.rating_overall %></p>
+          <p><%= "Overall Rating: #{review.rating_overall}" %></p>
           <p><%= review.comment %></p>
+          <p>HERE</p>
+          <p><em><%= "by #{review.user.first_name.capitalize} #{review.user.last_name.capitalize}." %></em></p>
+          <p><%= "Created on #{review.created_at.strftime("%-m/%-d/%y")}" %></p>
+          <br><br>
         <% end %>
       <% end %>
   </div>
