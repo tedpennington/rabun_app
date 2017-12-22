@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :reviews
   end
   
+  # get '/signin', to: 'devise/sessions#new'
+
   get 'pages/about'
 
   get 'pages/contact'

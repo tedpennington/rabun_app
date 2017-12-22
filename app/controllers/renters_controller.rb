@@ -4,7 +4,10 @@ class RentersController < ApplicationController
   # GET /renters
   # GET /renters.json
   def index
+    if user_signed_in?
     @renters = Renter.all
+    else redirect_to '/users/sign_in'
+    end
   end
 
   # GET /renters/1
