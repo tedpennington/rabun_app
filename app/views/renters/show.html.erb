@@ -76,10 +76,10 @@
           <strong>Misc:</strong>
           <%= @renter.misc %>
         </p>
-        <%# if Renter.find(params[:id]).user_id == current_user.id %>
+        <% if Renter.find(params[:id]).user_id == current_user.id %>
           <%= link_to 'Edit', edit_renter_path(@renter), class: "btn btn-warning" %>
           <%= link_to 'Destroy', @renter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-        <%# end %>
+        <% end %>
 
         <%= link_to  "Write a Review", new_renter_review_path(@renter), class: "btn btn-primary"%>
   </div>

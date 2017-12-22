@@ -79,6 +79,18 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:rating_overall, :rating_damage, :rating_payment, :rating_communication, :rating_checkinout, :people_number, :comment, :property_name, :property_address, :property_unit, :property_city, :property_state, :property_zip)
+      params.require(:review).permit(:rating_overall, 
+                                    :rating_damage, 
+                                    :rating_payment, 
+                                    :rating_communication, 
+                                    :rating_checkinout, 
+                                    :people_number, 
+                                    :comment, 
+                                    :property_name, 
+                                    :property_address, 
+                                    :property_unit, 
+                                    :property_city, 
+                                    :property_state, 
+                                    :property_zip,)
     end
 end
