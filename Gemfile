@@ -44,6 +44,9 @@ gem 'figaro', '~> 1.0.0'
 # Devise for users
 gem 'devise'
 
+# Jquery
+gem 'jquery-rails', '~> 4.0', '>= 4.0.5'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record Only in Dev and Test -tp
   gem 'sqlite3', '1.3.13'
