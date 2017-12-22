@@ -28,14 +28,23 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li> %>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search Renters" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      </form> -->
+      <%#SEARCH FORM%>
+      <%= form_tag(renters_path, method: :get, class: "form-inline my-2 my-lg-0") do %>
+      <%= text_field_tag :term, params[:term], class: "form-control mr-sm-2", placeholder: "Search Renters" %>
+      <%= submit_tag 'GO', name: nil, class: "btn btn-outline-success my-2 my-sm-0" %>
+      <% end %>
+      <%#END SEARCH FORM%>
       <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
           <li class="nav-item">
               <%= link_to  "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+              <%#= link_to edit_user_registration_path, class: "" do %>
+                <!-- <i class="glyphicon glyphicon-user"></i> -->
+               <%# end %>
           </li> 
           <li class="nav-item">
               <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>

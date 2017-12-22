@@ -5,7 +5,16 @@ class RentersController < ApplicationController
   # GET /renters.json
   def index
     if user_signed_in?
-    @renters = Renter.all
+    #Commented out and replaced by below for search
+    # @renters = Renter.all
+    #SEARCH!
+    @renters = if params[:term]
+      Renter.where('first_name LIKE ? OR last_name LIKE ? OR aka LIKE ? OR email LIKE ? OR phone_number LIKE ? OR mobile_phone LIKE ?', "%#{params[:term]}%", "%#{params[:term]}%", "%#{params[:term]}%", "%#{params[:term]}%", "%#{params[:term]}%", "%#{params[:term]}%")
+      else
+        Renter.all
+    #END SEARCH
+      end
+
     else redirect_to '/users/sign_in'
     end
   end
@@ -91,6 +100,7 @@ class RentersController < ApplicationController
                                     :linkedin_url, 
                                     :misc, 
                                     :image,
-                                    :user_id)
+                                    :user_id,
+                                    :term)
     end
 end
