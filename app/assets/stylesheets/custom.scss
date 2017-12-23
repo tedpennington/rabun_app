@@ -1,16 +1,32 @@
+
+// Colors flown in in case need to change -tp
+// $primary:       green !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+// Custom bootstrap variables must be set or imported *before* bootstrap. -Bootstrap gem docs
+@import "bootstrap";
+
 @import "font-awesome";
 
-.hover-not a:hover {
-  background-color: none !important;
-}
+
+
+// .hover-not a:hover {
+//   background-color: none !important;
+// }
 .fa.fa-user, .fa.fa-sign-out {
-  color: white;
+  // color: white;
   font-size: 2.25em;
   padding: 7px;
   padding-left: 15px;
-    a{
-      &:hover{
-        background-color: red !important;
-      }
-    }
+    // a{
+    //   &:hover{
+    //     background-color: red !important;
+    //   }
+    // }
 }
