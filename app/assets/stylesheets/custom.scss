@@ -14,7 +14,18 @@
 
 @import "font-awesome";
 
+body{
+  background-image: url('lake_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
+#welcome-jumbo {
+  background: rgba(18, 78, 10, 0.473);
+  margin: 3rem 4rem 1rem 4rem;
+  color: rgb(211, 211, 211);
+}
 
 // .hover-not a:hover {
 //   background-color: none !important;
