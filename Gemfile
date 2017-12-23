@@ -39,7 +39,7 @@ gem 'carrierwave'
 gem 'fog-aws'
 
 # Figaro for creds on Heroku -tp
-# gem 'figaro', '~> 1.0.0'
+gem 'figaro', '~> 1.0.0'
 
 # Devise for users
 gem 'devise'
