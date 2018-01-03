@@ -15,10 +15,12 @@
 @import "font-awesome";
 
 body{
-  background-image: url('lake_bg.jpg');
+  background: url('lake_bg.jpg');
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  // background-position: ;
+  // min-height: 1200px;
 }
 
 #welcome-jumbo {
