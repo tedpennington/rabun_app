@@ -34,7 +34,7 @@
       </form> -->
       <%#SEARCH FORM%>
       <%= form_tag(renters_path, method: :get, class: "form-inline my-2 my-lg-0") do %>
-      <%= text_field_tag :term, params[:term], class: "form-control mr-sm-2", placeholder: "Search Renters" %>
+      <%= text_field_tag :term, params[:term], class: "form-control mr-sm-2", placeholder: "Search Renters", autofocus: true %>
       <%= submit_tag 'GO', name: nil, class: "btn btn-outline-success my-2 my-sm-0" %>
       <% end %>
       <%#END SEARCH FORM%>
