@@ -26,6 +26,12 @@ body{
   // min-height: 1200px;
 }
 
+// Bump the nav items to bottom of navbar
+.navbar-collapse {
+  margin-top: 4rem;
+}
+
+
 #welcome-jumbo {
   background: rgba(38, 83, 43, 0.473);
   margin: 3rem 4rem 1rem 4rem;
