@@ -1,9 +1,12 @@
 
 // Colors flown in in case need to change -tp
 // $primary:       green !default;
+$primary: #083d77;
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
+$success: rgb(30, 204, 3);
 // $info:          $cyan !default;
+$info: #216869;
 // $warning:       $yellow !default;
 // $danger:        $red !default;
 // $light:         $gray-100 !default;
@@ -24,9 +27,18 @@ body{
 }
 
 #welcome-jumbo {
-  background: rgba(18, 78, 10, 0.473);
+  background: rgba(38, 83, 43, 0.473);
   margin: 3rem 4rem 1rem 4rem;
   color: rgb(211, 211, 211);
+}
+
+//Tables
+.rabun-table-div {
+  background: rgba(38, 83, 43, 0.473);
+  color: rgb(240, 240, 240);
+  padding: 3rem;
+  border-radius: 15px;
+  margin: 1rem 3rem 1rem 3rem;
 }
 
 // .hover-not a:hover {
