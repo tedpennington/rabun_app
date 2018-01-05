@@ -30,12 +30,36 @@ body{
 .navbar-collapse {
   margin-top: 4rem;
 }
+.navbar-brand {
+  padding-bottom: 0;
+}
 
+
+.navbar {
+  padding-bottom: .25rem; /* Reduce the bootstrap padding of bottom of navbar */
+}
+
+#username-nav {
+  margin: 1rem 0 0 1rem;
+}
 
 #welcome-jumbo {
   background: rgba(38, 83, 43, 0.473);
   margin: 3rem 4rem 1rem 4rem;
   color: rgb(211, 211, 211);
+}
+
+// Sticky Footer
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Set the fixed height of the footer here */
+  line-height: 30px; /* Vertically center the text there */
+  text-align: center;
+  background: rgba(53, 58, 64, 0.7);
+  margin-left: -15px; /* Move the footer over to eliminate small space */
+  
 }
 
 //Tables

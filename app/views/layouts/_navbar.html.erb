@@ -40,6 +40,11 @@
       <%#END SEARCH FORM%>
       <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
+          <li class="nav-item" id="username-nav">
+          <%= link_to edit_user_registration_path do %>
+          Hello, <%=current_user.first_name.capitalize%> <%=current_user.last_name.capitalize%>!
+              <% end %>
+          </li>
           <li class="nav-item hover-not">
               <%# Replaced with font-awesome icon %>
               <%#= link_to  "Edit Profile", edit_user_registration_path, class: "nav-link" %>
