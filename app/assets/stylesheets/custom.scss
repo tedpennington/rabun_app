@@ -84,7 +84,7 @@ body{
 
 //Tables
 .rabun-table-div {
-  background: rgba(38, 83, 43, 0.473);
+  background: rgba(3, 41, 0, 0.473);
   color: rgb(240, 240, 240);
   padding: 3rem;
   border-radius: 15px;
@@ -93,8 +93,10 @@ body{
 }
 
 .renter-column {
-  border-right: 1px solid white;
-  padding-right: 2rem;
+  // border-right: 1px solid white;
+  background-color: rgba(102, 102, 0, 0.411);
+  border-radius: 15px;
+  padding: 1rem;
   p {
     // text-align: right;
     word-wrap: break-word;
@@ -102,12 +104,13 @@ body{
 }
 
 .reviews-column {
+  border-left: 1px solid white;
   text-align: right;
   padding-left: 2em;
 }
 
 .review-bubble {
-  background-color:  rgba(40, 141, 82, 0.473);
+  background-color:  rgba(3, 41, 0, 0.473);
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 2em;

@@ -4,6 +4,7 @@
   <div class="col-md-3 renter-column">
       <h4><span style="text-decoration:underline;">Renter Profile:</span></h4>
       <hr>
+      <h5>Name/Identity</h5>
       <p>
           <strong>First name:</strong><br>
           <%= @renter.first_name %>
@@ -19,11 +20,23 @@
           <%= @renter.aka %>
         </p>
         
+        <h5>Contact Info</h5>
         <p>
           <strong>Email:</strong><br>
           <%= @renter.email %>
         </p>
+
+        <p>
+          <strong>Phone number:</strong><br>
+          <%= @renter.phone_number %>
+        </p>
+          
+        <p>
+          <strong>Mobile phone:</strong><br>
+          <%= @renter.mobile_phone %>
+        </p>
         
+        <h5>Physical Address</h5>
         <p>
           <strong>Street address:</strong><br>
           <%= @renter.street_address %>
@@ -44,15 +57,7 @@
           <%= @renter.zip %>
         </p>
         
-        <p>
-          <strong>Phone number:</strong><br>
-          <%= @renter.phone_number %>
-        </p>
-        
-        <p>
-          <strong>Mobile phone:</strong><br>
-          <%= @renter.mobile_phone %>
-        </p>
+        <h5>Social/Online</h5>
         
         <p>
           <strong>Vrbo url:</strong><br>
@@ -73,7 +78,7 @@
           <strong>Linkedin url:</strong><br>
           <%= @renter.linkedin_url %>
         </p>
-        
+        <h5>Other</h5>
         <p>
           <strong>Misc:</strong>
           <%= @renter.misc %>
