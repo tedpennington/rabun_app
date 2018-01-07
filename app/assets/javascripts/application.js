@@ -15,5 +15,6 @@
 //= require_tree .
 // Adding Bootstrap requires per gem docs -tp
 //= require jquery3
+//= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets

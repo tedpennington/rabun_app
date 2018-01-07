@@ -11,72 +11,86 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :rating_overall %>
-    <%= form.number_field :rating_overall, id: :review_rating_overall %>
+  <div class="form-group row">
+    <%= form.label :rating_overall, class: "col-3 col-form-label" %>
+    <%= form.select :rating_overall, (1..5), id: :review_rating_overall, class: "form-control col-1", placeholder: "5" %>
+    <small class="form-text text-muted col-5">What was your overall impression of this renter on a scale from 1 (worst)to 5 (best)?</small>
   </div>
 
-  <div class="field">
-    <%= form.label :rating_damage %>
-    <%= form.number_field :rating_damage, id: :review_rating_damage %>
+  <div class="form-group row">
+    <%= form.label :rating_damage, class: "col-3 col-form-label" %>
+    <%= form.select :rating_damage, (1..5), id: :review_rating_damage, class: "form-control col-1", placeholder: "5" %>
+    <small class="form-text text-muted col-5">How would you rate the conditon in which the property was left? Take into account any damage done or any excessive cleaning required, etc.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :rating_payment %>
-    <%= form.number_field :rating_payment, id: :review_rating_payment %>
+  <div class="form-group row">
+    <%= form.label :rating_payment, class: "col-3 col-form-label" %>
+    <%= form.select :rating_payment, (1..5), id: :review_rating_payment, class: "form-control col-1", placeholder: "5" %>
+    <small class="form-text text-muted col-5">Was the renter timely with deposit and balance payments?</small>
   </div>
 
-  <div class="field">
-    <%= form.label :rating_communication %>
-    <%= form.number_field :rating_communication, id: :review_rating_communication %>
+  <div class="form-group row">
+    <%= form.label :rating_communication, class: "col-3 col-form-label" %>
+    <%= form.select :rating_communication, (1..5), id: :review_rating_communication, class: "form-control col-1", placeholder: "5" %>
+    <small class="form-text text-muted col-5">How was the renter's communication? Was it timely and polite?</small>
   </div>
 
-  <div class="field">
-    <%= form.label :rating_checkinout %>
-    <%= form.number_field :rating_checkinout, id: :review_rating_checkinout %>
+  <div class="form-group row">
+    <%= form.label :rating_checkinout, class: "col-3 col-form-label" %>
+    <%= form.select :rating_checkinout, (1..5), id: :review_rating_checkinout, class: "form-control col-1", placeholder: "5" %>
+    <small class="form-text text-muted col-5">How would you rate the check-in/check-out experience? Did the renter arrive when they said they would and check out on time?</small>
   </div>
 
-  <div class="field">
-    <%= form.label :people_number %>
-    <%= form.number_field :people_number, id: :review_people_number %>
+  <div class="form-group row">
+    <%= form.label :people_number, class: "col-3 col-form-label" %>
+    <%= form.number_field :people_number, id: :review_people_number, class: "form-control col-1", placeholder: "2" %>
+    <small class="form-text text-muted col-5">How many people were in the rental party?</small>
   </div>
 
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment, id: :review_comment %>
+  <div class="form-group row">
+    <%= form.label :comment, class: "col-3 col-form-label" %>
+    <%= form.text_area :comment, id: :review_comment, class: "form-control col-9", placeholder: "Write your review here..." %>
+    <div class="col-3"></div>
+    <small class="form-text text-muted col-5">Add any comments you have about the experience.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :property_name %>
-    <%= form.text_field :property_name, id: :review_property_name %>
+  <div class="form-group row">
+    <%= form.label :property_name, class: "col-3 col-form-label" %>
+    <%= form.text_field :property_name, id: :review_property_name, class: "form-control col-5", placeholder: "The Wallace Cabin" %>
+    <div class="col-4"></div>
+    <div class="col-3"></div>
+    <small class="form-text text-muted col-5">What is the name (if any) of the rental property?</small>
   </div>
 
-  <div class="field">
-    <%= form.label :property_address %>
-    <%= form.text_field :property_address, id: :review_property_address %>
+  <div class="form-group row">
+    <%= form.label :property_address, class: "col-3 col-form-label" %>
+    <%= form.text_field :property_address, id: :review_property_address, class: "form-control col-9", placeholder: "123 Old Dirt Rd." %>
   </div>
 
-  <div class="field">
-    <%= form.label :property_unit %>
-    <%= form.text_field :property_unit, id: :review_property_unit %>
+  <div class="form-group row">
+    <%= form.label :property_unit, class: "col-3 col-form-label" %>
+    <%= form.text_field :property_unit, id: :review_property_unit, class: "form-control col-3", placeholder: "#2" %>
   </div>
 
-  <div class="field">
-    <%= form.label :property_city %>
-    <%= form.text_field :property_city, id: :review_property_city %>
+  <div class="form-group row">
+    <%= form.label :property_city, class: "col-3 col-form-label" %>
+    <%= form.text_field :property_city, id: :review_property_city, class: "form-control col-3", placeholder: "Lakemont" %>
   </div>
 
-  <div class="field">
-    <%= form.label :property_state %>
-    <%= form.text_field :property_state, id: :review_property_state %>
+  <div class="form-group row">
+    <%= form.label :property_state, class: "col-3 col-form-label" %>
+    <%= form.text_field :property_state, id: :review_property_state, class: "form-control col-1", placeholder: "GA" %>
   </div>
 
-  <div class="field">
-    <%= form.label :property_zip %>
-    <%= form.number_field :property_zip, id: :review_property_zip %>
+  <div class="form-group row">
+    <%= form.label :property_zip, class: "col-3 col-form-label" %>
+    <%= form.number_field :property_zip, id: :review_property_zip, class: "form-control col-3", placeholder: "30552" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group row">
+    <div class="col-2"></div>
+    <div class="col-10 row justify-content-center">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

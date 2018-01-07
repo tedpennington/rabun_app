@@ -17,6 +17,10 @@ $danger: rgba(133, 0, 0, .911);
 // $text-muted:                  $gray-600 !default;
 $text-muted: rgb(214, 214, 214);
 
+// Override Bootstrap hover color
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: rgba(187, 44, 0, 0.356);
+}
 
 
 
@@ -35,6 +39,9 @@ body{
   // min-height: 1200px;
 }
 
+hr {
+  border-color: rgba(255, 255, 255, 0.671);
+}
 
 
 // Bump the nav items to bottom of navbar
@@ -64,9 +71,16 @@ body{
 }
 
 #welcome-jumbo {
-  background: rgba(38, 83, 43, 0.473);
+  background: rgba(3, 41, 0, 0.473);
   margin: 3rem 4rem 1rem 4rem;
   color: rgb(211, 211, 211);
+  // #jumbo-top {
+  //   background-color: rgba(3, 41, 0, 0.473);
+  //   border-radius: 15px;
+  //   margin: 0 0 0 0;
+  //   // padding: 0 0 0 0;
+  //   box-sizing: border-box;
+  // }
 }
 
 // Sticky Footer
@@ -92,11 +106,36 @@ body{
   box-shadow: 0 0 1em black;
 }
 
+#renter-table-div {
+  background-color: rgba(102, 24, 0, 0.411);
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+}
+
+#new-renter-button {
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.renter-big-name {
+  background-color:  rgba(3, 41, 0, 0.473);
+  padding: .5rem;
+  // margin-top: 1em;
+  // margin-bottom: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+}
+
 .renter-column {
   // border-right: 1px solid white;
-  background-color: rgba(102, 102, 0, 0.411);
+  background-color: rgba(102, 24, 0, 0.411);
   border-radius: 15px;
-  padding: 1rem;
+  box-shadow: 0 0 1em;
+  padding-top: 1rem;
+  // margin-left: -5px;
   p {
     // text-align: right;
     word-wrap: break-word;
@@ -104,9 +143,15 @@ body{
 }
 
 .reviews-column {
-  border-left: 1px solid white;
+  background: rgba(3, 41, 0, 0.473);
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+  // border-left: 1px solid white;
   text-align: right;
-  padding-left: 2em;
+  // padding-left: 2em;
+  h4 {
+    padding-top: .75rem;
+  }
 }
 
 .review-bubble {

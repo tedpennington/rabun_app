@@ -5,8 +5,12 @@
 <div class="rabun-table-div">
   <h2>Renters</h2>
   <p>All known renters in our system are shown below.  Search any field by typing in the search box above.</p>
+  <div id="renter-table-div">
+  <div class="row">
+    <h6 class="col-12">Click on any renter to see their profile and reviews.</h6>
+  </div>
   <div class="row justify-content-end">
-    <%= link_to '+ New Renter', new_renter_path, class: "btn btn-primary" %><br>
+    <%= link_to '+ Add a Renter', new_renter_path, id: "new-renter-button", class: "btn btn-primary" %><br>
   </div>
   <br>
   <table class="table table-hover">
@@ -24,7 +28,7 @@
 
     <tbody>
       <% @renters.order(:last_name).each do |renter| %>
-        <tr>
+        <tr data-link="<%= renter_path(renter) %>">
           <td><%= link_to renter.first_name, renter %></td>
           <td><%= link_to renter.last_name, renter  %></td>
           <td><%= link_to renter.aka, renter  %></td>
@@ -38,6 +42,7 @@
       <% end %>
     </tbody>
   </table>
+  </div>
 </div>
 
 <br>

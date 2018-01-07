@@ -1,6 +1,12 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="rabun-table-div">
 <div class="row">
+    <%= link_to '<-Back to Renters', renters_path, class: "btn btn-link" %>
+</div>
+<div class="row justify-content-center">
+    <h1 class="renter-big-name"><%= "#{@renter.first_name} #{@renter.last_name}"%></h1>
+</div>  
+<div class="row">
   <div class="col-md-3 renter-column">
       <h4><span style="text-decoration:underline;">Renter Profile:</span></h4>
       <hr>
@@ -91,7 +97,9 @@
         
   </div>
   <div class="col-md-9 reviews-column">
-      <h4><span style="text-decoration:underline">Reviews:</span></h4>
+      <div class="row justify-content-center">
+      <h4><span style="text-decoration:underline">Reviews on this renter:</span></h4>
+      </div>
       <hr>
       <%= link_to  "+ Add a New Review", new_renter_review_path(@renter), class: "btn btn-primary"%>
       <% if @reviews.blank? %>
@@ -99,7 +107,7 @@
       <% else %>
         <% @reviews.order('created_at DESC').each do |review| %>
           <div class="review-bubble">
-            <h6><%= "Review by #{review.user.first_name.capitalize} #{review.user.last_name.capitalize} on #{review.created_at.strftime("%-m/%-d/%y")}:" %></h6>
+            <h6><%= "Reviewed by #{review.user.first_name.capitalize} #{review.user.last_name.capitalize} on #{review.created_at.strftime("%-m/%-d/%y")}:" %></h6>
             <p><%= "Overall Rating: #{review.rating_overall}" %></p>
             <p><%= review.comment %></p>
             <!-- <p><em><%= "by #{review.user.first_name.capitalize} #{review.user.last_name.capitalize}." %></em></p> -->
@@ -118,6 +126,6 @@
 
 
 
-<%= link_to 'Edit', edit_renter_path(@renter), class: "btn btn-link" %> |
-<%= link_to 'Back', renters_path, class: "btn btn-link" %>
+<%#= link_to 'Edit', edit_renter_path(@renter), class: "btn btn-link" %>
+
 </div>
