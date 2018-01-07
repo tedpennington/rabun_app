@@ -12,8 +12,15 @@ $info: #216869;
 // $light:         $gray-100 !default;
 // $dark:          $gray-800 !default;
 
+// $text-muted:                  $gray-600 !default;
+$text-muted: rgb(214, 214, 214);
+
+
+
+
 // Custom bootstrap variables must be set or imported *before* bootstrap. -Bootstrap gem docs
 @import "bootstrap";
+
 
 @import "font-awesome";
 

@@ -13,79 +13,91 @@
   
   <%= form.hidden_field :user_id, :value => current_user.id %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :renter_first_name, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :first_name, class: "col-2 col-form-label" %>
+    <%= form.text_field :first_name, id: :renter_first_name, class: "form-control col-10", placeholder: "Jane" %>
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :renter_last_name, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :last_name, class: "col-2 col-form-label" %>
+    <%= form.text_field :last_name, id: :renter_last_name, class: "form-control col-10", placeholder: "Doe" %>
   </div>
 
-  <div class="field">
-    <%= form.label :aka %>
-    <%= form.text_field :aka, id: :renter_aka, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :aka, 'AKA', class: "col-2 col-form-label" %>
+    <%= form.text_field :aka, id: :renter_aka, class: "form-control col-10", placeholder: "Janie" %>
+    <div class="col-2"></div>
+    <small class="form-text text-muted">"Also Known As": Enter any alias or nickname this renter may use.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :renter_email, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :email, class: "col-2 col-form-label" %>
+    <%= form.text_field :email, id: :renter_email, class: "form-control col-10", placeholder: "email@domain.com" %>
+    <div class="col-2"></div>
+    <small class="form-text text-muted">Email addresses of renters are shared only among authorized users of this site.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :street_address %>
-    <%= form.text_field :street_address, id: :renter_street_address, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :street_address, class: "col-2 col-form-label" %>
+    <%= form.text_field :street_address, id: :renter_street_address, class: "form-control col-10", placeholder: "123 Main St." %>
   </div>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :renter_city, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :city, class: "col-2 col-form-label" %>
+    <%= form.text_field :city, id: :renter_city, class: "form-control col-10", placeholder: "Atlanta" %>
   </div>
 
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state, id: :renter_state, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :state, class: "col-2 col-form-label" %>
+    <%= form.text_field :state, id: :renter_state, class: "form-control col-10", placeholder: "GA" %>
   </div>
 
-  <div class="field">
-    <%= form.label :zip %>
-    <%= form.number_field :zip, id: :renter_zip, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :zip, class: "col-2 col-form-label" %>
+    <%= form.number_field :zip, id: :renter_zip, class: "form-control col-10", placeholder: "30625" %>
   </div>
 
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, id: :renter_phone_number, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :phone_number, class: "col-2 col-form-label" %>
+    <%= form.text_field :phone_number, id: :renter_phone_number, class: "form-control col-10", placeholder: "4045551212" %>
   </div>
 
-  <div class="field">
-    <%= form.label :mobile_phone %>
-    <%= form.text_field :mobile_phone, id: :renter_mobile_phone, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :mobile_phone, class: "col-2 col-form-label" %>
+    <%= form.text_field :mobile_phone, id: :renter_mobile_phone, class: "form-control col-10", placeholder: "4045551212" %>
   </div>
 
-  <div class="field">
-    <%= form.label :vrbo_url %>
-    <%= form.text_field :vrbo_url, id: :renter_vrbo_url, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :vrbo_url, class: "col-2 col-form-label" %>
+    <%= form.text_field :vrbo_url, id: :renter_vrbo_url, class: "form-control col-10", placeholder: "http://" %>
+    <div class="col-2"></div>
+    <small class="form-text text-muted">Enter a link to the renter's VRBO profile or reviews, if known.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :airbnb_url %>
-    <%= form.text_field :airbnb_url, id: :renter_airbnb_url, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :airbnb_url, class: "col-2 col-form-label" %>
+    <%= form.text_field :airbnb_url, id: :renter_airbnb_url, class: "form-control col-10", placeholder: "http://" %>
+    <div class="col-2"></div>
+    <small class="form-text text-muted">Enter a link to the renter's AirBNB profile or reviews, if known.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :facebook_url %>
-    <%= form.text_field :facebook_url, id: :renter_facebook_url, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :facebook_url, class: "col-2 col-form-label" %>
+    <%= form.text_field :facebook_url, id: :renter_facebook_url, class: "form-control col-10", placeholder: "http://" %>
+    <div class="col-2"></div>
+    <small class="form-text text-muted">Enter a link to the renter's facebook profile, if known.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :linkedin_url %>
-    <%= form.text_field :linkedin_url, id: :renter_linkedin_url, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :linkedin_url, class: "col-2 col-form-label" %>
+    <%= form.text_field :linkedin_url, id: :renter_linkedin_url, class: "form-control col-10", placeholder: "http://" %>
+    <div class="col-2"></div>
+    <small class="form-text text-muted">Enter a link to the renter's LinkedIn profile, if known.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :misc %>
-    <%= form.text_field :misc, id: :renter_misc, class: "form-control" %>
+  <div class="form-group row">
+    <%= form.label :misc, class: "col-2 col-form-label" %>
+    <%= form.text_field :misc, id: :renter_misc, class: "form-control col-10" %>
   </div>
 
 
