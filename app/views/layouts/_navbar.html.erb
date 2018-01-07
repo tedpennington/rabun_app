@@ -42,7 +42,7 @@
           <% if user_signed_in? %>
           <li class="nav-item" id="username-nav">
           <%= link_to edit_user_registration_path do %>
-          Hello, <%=current_user.first_name.capitalize%> <%=current_user.last_name.capitalize%>!
+          Hello, <br><%=current_user.first_name.capitalize%> <%=current_user.last_name.capitalize%>!
               <% end %>
           </li>
           <li class="nav-item hover-not">
