@@ -23,7 +23,7 @@
     </thead>
 
     <tbody>
-      <% @renters.each do |renter| %>
+      <% @renters.order(:last_name).each do |renter| %>
         <tr>
           <td><%= link_to renter.first_name, renter %></td>
           <td><%= link_to renter.last_name, renter  %></td>

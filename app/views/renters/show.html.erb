@@ -1,74 +1,76 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="rabun-table-div">
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-3 renter-column">
+      <h4><span style="text-decoration:underline;">Renter Profile:</span></h4>
+      <hr>
       <p>
-          <strong>First name:</strong>
+          <strong>First name:</strong><br>
           <%= @renter.first_name %>
         </p>
         
         <p>
-          <strong>Last name:</strong>
+          <strong>Last name:</strong><br>
           <%= @renter.last_name %>
         </p>
         
         <p>
-          <strong>Aka:</strong>
+          <strong>Aka:</strong><br>
           <%= @renter.aka %>
         </p>
         
         <p>
-          <strong>Email:</strong>
+          <strong>Email:</strong><br>
           <%= @renter.email %>
         </p>
         
         <p>
-          <strong>Street address:</strong>
+          <strong>Street address:</strong><br>
           <%= @renter.street_address %>
         </p>
         
         <p>
-          <strong>City:</strong>
+          <strong>City:</strong><br>
           <%= @renter.city %>
         </p>
         
         <p>
-          <strong>State:</strong>
+          <strong>State:</strong><br>
           <%= @renter.state %>
         </p>
         
         <p>
-          <strong>Zip:</strong>
+          <strong>Zip:</strong><br>
           <%= @renter.zip %>
         </p>
         
         <p>
-          <strong>Phone number:</strong>
+          <strong>Phone number:</strong><br>
           <%= @renter.phone_number %>
         </p>
         
         <p>
-          <strong>Mobile phone:</strong>
+          <strong>Mobile phone:</strong><br>
           <%= @renter.mobile_phone %>
         </p>
         
         <p>
-          <strong>Vrbo url:</strong>
+          <strong>Vrbo url:</strong><br>
           <%= @renter.vrbo_url %>
         </p>
         
         <p>
-          <strong>Airbnb url:</strong>
+          <strong>Airbnb url:</strong><br>
           <%= @renter.airbnb_url %>
         </p>
         
         <p>
-          <strong>Facebook url:</strong>
+          <strong>Facebook url:</strong><br>
           <%= @renter.facebook_url %>
         </p>
         
         <p>
-          <strong>Linkedin url:</strong>
+          <strong>Linkedin url:</strong><br>
           <%= @renter.linkedin_url %>
         </p>
         
@@ -77,27 +79,31 @@
           <%= @renter.misc %>
         </p>
         <% if Renter.find(params[:id]).user_id == current_user.id %>
-          <%= link_to 'Edit', edit_renter_path(@renter), class: "btn btn-warning" %>
-          <%= link_to 'Destroy', @renter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <%= link_to 'Edit Renter', edit_renter_path(@renter), class: "btn btn-warning" %>
+          <%= link_to 'Delete Renter', @renter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
         <% end %>
 
-        <%= link_to  "Write a Review", new_renter_review_path(@renter), class: "btn btn-primary"%>
+        
   </div>
-  <div class="col-md-9">
+  <div class="col-md-9 reviews-column">
+      <h4><span style="text-decoration:underline">Reviews:</span></h4>
+      <hr>
+      <%= link_to  "+ Add a New Review", new_renter_review_path(@renter), class: "btn btn-primary"%>
       <% if @reviews.blank? %>
         <h3>No reviews yet.</h3>
       <% else %>
-        <% @reviews.each do |review| %>
-          <p><%= "Overall Rating: #{review.rating_overall}" %></p>
-          <p><%= review.comment %></p>
-          <p>HERE</p>
-          <p><em><%= "by #{review.user.first_name.capitalize} #{review.user.last_name.capitalize}." %></em></p>
-          <p><%= "Created on #{review.created_at.strftime("%-m/%-d/%y")}" %></p>
-          <% if review.user_id == current_user.id %>
-            <%= link_to 'Edit', edit_renter_review_path(@renter, review), class: "btn btn-warning" %>
-            <%= link_to 'Destroy', renter_review_path(@renter, review), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-          <% end %>
-          <br><br>
+        <% @reviews.order('created_at DESC').each do |review| %>
+          <div class="review-bubble">
+            <h6><%= "Review by #{review.user.first_name.capitalize} #{review.user.last_name.capitalize} on #{review.created_at.strftime("%-m/%-d/%y")}:" %></h6>
+            <p><%= "Overall Rating: #{review.rating_overall}" %></p>
+            <p><%= review.comment %></p>
+            <!-- <p><em><%= "by #{review.user.first_name.capitalize} #{review.user.last_name.capitalize}." %></em></p> -->
+            <!-- <p><%= "Created on #{review.created_at.strftime("%-m/%-d/%y")}" %></p> -->
+            <% if review.user_id == current_user.id %>
+              <%= link_to 'Edit Review', edit_renter_review_path(@renter, review), class: "btn btn-warning" %>
+              <%= link_to 'Delete Review', renter_review_path(@renter, review), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
   </div>
