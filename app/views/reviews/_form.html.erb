@@ -13,38 +13,38 @@
 
   <div class="form-group row">
     <%= form.label :rating_overall, class: "col-3 col-form-label" %>
-    <%= form.select :rating_overall, (1..5), id: :review_rating_overall, class: "form-control col-1", placeholder: "5" %>
-    <small class="form-text text-muted col-5">What was your overall impression of this renter on a scale from 1 (worst)to 5 (best)?</small>
+    <%= form.select :rating_overall, (1..5), id: :review_rating_overall, class: "form-control col-1", default: "5" %>
+    <small class="form-text text-muted col-8">What was your overall impression of this renter on a scale from 1 (worst)to 5 (best)?</small>
   </div>
 
   <div class="form-group row">
     <%= form.label :rating_damage, class: "col-3 col-form-label" %>
     <%= form.select :rating_damage, (1..5), id: :review_rating_damage, class: "form-control col-1", placeholder: "5" %>
-    <small class="form-text text-muted col-5">How would you rate the conditon in which the property was left? Take into account any damage done or any excessive cleaning required, etc.</small>
+    <small class="form-text text-muted col-8">How would you rate the conditon in which the property was left? Take into account any damage done or any excessive cleaning required, etc.</small>
   </div>
 
   <div class="form-group row">
     <%= form.label :rating_payment, class: "col-3 col-form-label" %>
     <%= form.select :rating_payment, (1..5), id: :review_rating_payment, class: "form-control col-1", placeholder: "5" %>
-    <small class="form-text text-muted col-5">Was the renter timely with deposit and balance payments?</small>
+    <small class="form-text text-muted col-8">Was the renter timely with deposit and balance payments?</small>
   </div>
 
   <div class="form-group row">
     <%= form.label :rating_communication, class: "col-3 col-form-label" %>
     <%= form.select :rating_communication, (1..5), id: :review_rating_communication, class: "form-control col-1", placeholder: "5" %>
-    <small class="form-text text-muted col-5">How was the renter's communication? Was it timely and polite?</small>
+    <small class="form-text text-muted col-8">How was the renter's communication? Was it timely and polite?</small>
   </div>
 
   <div class="form-group row">
     <%= form.label :rating_checkinout, class: "col-3 col-form-label" %>
     <%= form.select :rating_checkinout, (1..5), id: :review_rating_checkinout, class: "form-control col-1", placeholder: "5" %>
-    <small class="form-text text-muted col-5">How would you rate the check-in/check-out experience? Did the renter arrive when they said they would and check out on time?</small>
+    <small class="form-text text-muted col-8">How would you rate the check-in/check-out experience? Did the renter arrive when they said they would and check out on time?</small>
   </div>
 
   <div class="form-group row">
     <%= form.label :people_number, class: "col-3 col-form-label" %>
     <%= form.number_field :people_number, id: :review_people_number, class: "form-control col-1", placeholder: "2" %>
-    <small class="form-text text-muted col-5">How many people were in the rental party?</small>
+    <small class="form-text text-muted col-8">How many people were in the rental party?</small>
   </div>
 
   <div class="form-group row">

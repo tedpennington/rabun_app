@@ -90,8 +90,8 @@
           <%= @renter.misc %>
         </p>
         <% if Renter.find(params[:id]).user_id == current_user.id %>
-          <%= link_to 'Edit Renter', edit_renter_path(@renter), class: "btn btn-warning" %>
-          <%= link_to 'Delete Renter', @renter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <%= link_to 'Edit Renter', edit_renter_path(@renter), class: "btn btn-warning", id: "renter-panel-edit-btn" %>
+          <%= link_to 'Delete Renter', @renter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", id: "renter-panel-delete-btn" %>
         <% end %>
 
         
