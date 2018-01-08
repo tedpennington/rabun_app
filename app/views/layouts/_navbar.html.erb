@@ -1,0 +1,72 @@
+<%#Bootstrap Navbar%>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <%= link_to image_tag("rabun_logo_web_wht_sml.png", alt: "logo"), root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to  "About", pages_about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to  "Contact", pages_contact_path, class: "nav-link" %>
+        </li>
+        <%# <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> %>
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search Renters" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+      <%#SEARCH FORM%>
+      <%= form_tag(renters_path, method: :get, class: "form-inline my-2 my-lg-0") do %>
+      <%= text_field_tag :term, params[:term], class: "form-control mr-sm-2", placeholder: "Search Renters", autofocus: true %>
+      <%= submit_tag 'GO', name: nil, class: "btn btn-outline-success my-2 my-sm-0" %>
+      <% end %>
+      <%#END SEARCH FORM%>
+      <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+          <li class="nav-item" id="username-nav">
+          <%= link_to edit_user_registration_path do %>
+          Hello, <br><%=current_user.first_name.capitalize%> <%=current_user.last_name.capitalize%>!
+              <% end %>
+          </li>
+          <li class="nav-item hover-not">
+              <%# Replaced with font-awesome icon %>
+              <%#= link_to  "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+              <%= link_to fa_icon("user", class: "fa fa-user"), edit_user_registration_path %>
+            </li> 
+            <li class="nav-item">
+              <%# Replaced with font-awesome icon %>
+              <%#= link_to  "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              <%= link_to fa_icon("sign-out", class: "fa fa-sign-out"), destroy_user_session_path, method: :delete %>
+          </li>
+          <% else %>
+
+          <li class="nav-item">
+            <%= link_to  "Sign Up", new_user_registration_path, class: "nav-link" %>
+          </li>
+          
+          <li class="nav-item">
+            <%= link_to  "Sign In", new_user_session_path, class: "nav-link" %>
+          </li>
+          <% end %>
+            
+      </ul>
+    </div>
+  </nav>
+  <%#/Bootstrap Navbar%>

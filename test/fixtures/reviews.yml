@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating_overall: 1
+  rating_damage: 1
+  rating_payment: 1
+  rating_communication: 1
+  rating_checkinout: 1
+  people_number: 1
+  comment: MyText
+  property_name: MyString
+  property_address: MyString
+  property_unit: MyString
+  property_city: MyString
+  property_state: MyString
+  property_zip: 1
+
+two:
+  rating_overall: 1
+  rating_damage: 1
+  rating_payment: 1
+  rating_communication: 1
+  rating_checkinout: 1
+  people_number: 1
+  comment: MyText
+  property_name: MyString
+  property_address: MyString
+  property_unit: MyString
+  property_city: MyString
+  property_state: MyString
+  property_zip: 1

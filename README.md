@@ -1,24 +1,31 @@
-# README
+# Rabun Rental Community App
+Ruby On Rails application (SQLite/PostgreSQL) which enables property owners to rate and review renters, share information, and foster communication among the community.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
 
-Things you may want to cover:
+To get started with the app, clone the repo and then install the needed gems:
 
-* Ruby version
+```
+$ bundle install --without production
+```
 
-* System dependencies
+Next, migrate the database:
 
-* Configuration
+```
+$ rails db:migrate
+```
 
-* Database creation
+Run the app in a local server:
 
-* Database initialization
+```
+$ rails s
+```
 
-* How to run the test suite
+Navigate to your web browser and visit localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tech Stack
+- Rails 5
+- Ruby 2.4.2
+- SQLite/PostgreSQL
+- Bootstrap 4
+- Heroku

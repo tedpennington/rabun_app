@@ -8,13 +8,16 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
+
+# Bootstrap 4 -tp
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -33,12 +36,33 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Carrierwave for images per tut -tp
+gem 'carrierwave'
+
+# Fog gem for Carrierwave to integrate with AWS hosting per tut -tp
+gem 'fog-aws'
+
+# Figaro for creds on Heroku -tp
+gem 'figaro', '~> 1.0.0'
+
+# Devise for users
+gem 'devise'
+
+# Jquery
+gem 'jquery-rails', '~> 4.0', '>= 4.0.5'
+
+# Font Awesome for icons
+gem 'font-awesome-rails'
+
 group :development, :test do
+  # Use sqlite3 as the database for Active Record Only in Dev and Test -tp
+  gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', '9.0.6', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  
 end
 
 group :development do
@@ -48,6 +72,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

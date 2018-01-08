@@ -1,0 +1,187 @@
+
+// Colors flown in in case need to change -tp
+// $primary:       green !default;
+$primary: rgba(14, 26, 46, 0.911);
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+$success: rgba(30, 204, 3, .911);
+// $info:          $cyan !default;
+$info: #216869;
+// $warning:       $yellow !default;
+$warning: rgba(102, 102, 0, .911);
+// $danger:        $red !default;
+$danger: rgba(133, 0, 0, .911);
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+// $text-muted:                  $gray-600 !default;
+$text-muted: rgb(214, 214, 214);
+
+// Override Bootstrap hover color
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: rgba(187, 44, 0, 0.356);
+}
+
+
+
+// Custom bootstrap variables must be set or imported *before* bootstrap. -Bootstrap gem docs
+@import "bootstrap";
+
+
+@import "font-awesome";
+
+body{
+  background: url('lake_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  // background-position: ;
+  // min-height: 1200px;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.671);
+}
+
+
+// Bump the nav items to bottom of navbar
+.navbar-collapse {
+  margin-top: 4rem;
+}
+.navbar-brand {
+  padding-bottom: 0;
+}
+
+
+.navbar {
+  padding-bottom: .25rem; /* Reduce the bootstrap padding of bottom of navbar */
+}
+
+.bg-dark {
+  background: rgba(2, 27, 0, 0.904) !important; /*Override Bootstrap Background*/ 
+}
+
+#username-nav {
+  margin: .2rem 0 0 1rem;
+  // font-style: italic;
+  font-size: .8rem;
+  a {
+    text-decoration: none;
+  }
+}
+
+#welcome-jumbo {
+  background: rgba(3, 41, 0, 0.473);
+  margin: 3rem 4rem 1rem 4rem;
+  color: rgb(211, 211, 211);
+  // #jumbo-top {
+  //   background-color: rgba(3, 41, 0, 0.473);
+  //   border-radius: 15px;
+  //   margin: 0 0 0 0;
+  //   // padding: 0 0 0 0;
+  //   box-sizing: border-box;
+  // }
+}
+
+// Sticky Footer
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Set the fixed height of the footer here */
+  line-height: 30px; /* Vertically center the text there */
+  text-align: center;
+  background: rgba(2, 27, 0, 0.904);
+  margin-left: -15px; /* Move the footer over to eliminate small space */
+  
+}
+
+//Tables
+.rabun-table-div {
+  background: rgba(3, 41, 0, 0.473);
+  color: rgb(240, 240, 240);
+  padding: 3rem;
+  border-radius: 15px;
+  margin: 1rem 3rem 3rem 3rem;
+  box-shadow: 0 0 1em black;
+}
+
+#renter-table-div {
+  background-color: rgba(102, 24, 0, 0.411);
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+}
+
+#new-renter-button {
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.renter-big-name {
+  background-color:  rgba(3, 41, 0, 0.473);
+  padding: .5rem;
+  // margin-top: 1em;
+  // margin-bottom: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+}
+
+.renter-column {
+  // border-right: 1px solid white;
+  background-color: rgba(102, 24, 0, 0.411);
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+  padding-top: 1rem;
+  // margin-left: -5px;
+  p {
+    // text-align: right;
+    word-wrap: break-word;
+  }
+  #renter-panel-edit-btn{
+    margin: .5rem 0 1rem 0;
+  }
+  #renter-panel-delete-btn{
+    margin: 0 0 1rem 0;
+  }
+}
+
+.reviews-column {
+  background: rgba(3, 41, 0, 0.473);
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+  // border-left: 1px solid white;
+  text-align: right;
+  // padding-left: 2em;
+  h4 {
+    padding-top: .75rem;
+  }
+}
+
+.review-bubble {
+  background-color:  rgba(3, 41, 0, 0.473);
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 1em;
+
+}
+
+
+// .hover-not a:hover {
+//   background-color: none !important;
+// }
+.fa.fa-user, .fa.fa-sign-out {
+  // color: white;
+  font-size: 2.25em;
+  padding: 7px;
+  padding-left: 15px;
+    // a{
+    //   &:hover{
+    //     background-color: red !important;
+    //   }
+    // }
+}
